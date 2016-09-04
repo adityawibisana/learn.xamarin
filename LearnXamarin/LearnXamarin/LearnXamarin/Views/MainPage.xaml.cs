@@ -20,5 +20,10 @@ namespace LearnXamarin.Views
         {
             Navigation.PushAsync(new Page1());
         }
+
+        void OnGoToSimpleListSampleClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new SimpleSamplePage());
+        }
     }
 }

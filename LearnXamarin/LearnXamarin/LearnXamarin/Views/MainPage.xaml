@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LearnXamarin.Views.MainPage">
   <StackLayout>
-    <Button Text="Go To Next Page" Clicked="OnGoToNextPageClicked" />    
+    <Button Text="Go To Next Page" Clicked="OnGoToNextPageClicked" />
+    <Button Text="Go To Simple List Sample" Clicked="OnGoToSimpleListSampleClicked" />
   </StackLayout>
     
 </ContentPage>
