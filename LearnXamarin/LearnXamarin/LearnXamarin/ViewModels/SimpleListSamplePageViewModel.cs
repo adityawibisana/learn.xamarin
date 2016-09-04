@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace LearnXamarin.ViewModels { 
 
-    public class SimpleSamplePageViewModel : INotifyPropertyChanged
+    public class SimpleListSamplePageViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public ObservableCollection<Fruit> FruitList { get; set; }
 
-        public SimpleSamplePageViewModel()
+        public SimpleListSamplePageViewModel()
         {
             FruitList = new ObservableCollection<Fruit>();
             FruitList.Add(new Fruit() { EnglishName = "Apple", LatinName = "Malus domestica" });

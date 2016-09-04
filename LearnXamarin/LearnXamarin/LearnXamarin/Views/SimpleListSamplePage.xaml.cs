@@ -10,11 +10,11 @@ namespace LearnXamarin.Views
 {
     public partial class SimpleSamplePage : ContentPage
     {
-        ViewModels.SimpleSamplePageViewModel ViewModel;
+        ViewModels.SimpleListSamplePageViewModel ViewModel;
         public SimpleSamplePage()
         {
             InitializeComponent();
-            this.ViewModel = new ViewModels.SimpleSamplePageViewModel();
+            this.ViewModel = new ViewModels.SimpleListSamplePageViewModel();
             BindingContext = ViewModel;
         }
     }

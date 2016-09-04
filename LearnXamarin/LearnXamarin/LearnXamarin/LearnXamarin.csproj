@@ -38,15 +38,15 @@
     <Compile Include="App.cs" />
     <Compile Include="Models\Fruit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\SimpleSamplePageViewModel.cs" />
+    <Compile Include="ViewModels\SimpleListSamplePageViewModel.cs" />
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SimpleSamplePage.xaml.cs">
-      <DependentUpon>SimpleSamplePage.xaml</DependentUpon>
+    <Compile Include="Views\SimpleListSamplePage.xaml.cs">
+      <DependentUpon>SimpleListSamplePage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -79,7 +79,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\SimpleSamplePage.xaml">
+    <EmbeddedResource Include="Views\SimpleListSamplePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
