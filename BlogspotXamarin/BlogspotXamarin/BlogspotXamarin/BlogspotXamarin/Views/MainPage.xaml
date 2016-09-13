@@ -2,20 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BlogspotXamarin.Views.MainPage">
-  <ListView ItemsSource="{Binding FeedList}" Margin="12"   >
+  <ListView ItemsSource="{Binding FeedList}" HasUnevenRows="true">
     <ListView.ItemTemplate>
       <DataTemplate>
-        <ViewCell>
-          <ViewCell.View>
+        <ViewCell> 
             <Grid>
               <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />  
               </Grid.RowDefinitions>
-              <Label Text="{Binding Title}" FontAttributes="Bold" />
-              <Label Text="{Binding ShortContent}" Grid.Row="1" />
-            </Grid>
-          </ViewCell.View>
+              <Label Text="{Binding Title}" FontAttributes="Bold" /> 
+              <Label Text="{Binding ShortContent}" Grid.Row="1" Margin="0,0,0,12" />  
+            </Grid> 
         </ViewCell>
       </DataTemplate>
     </ListView.ItemTemplate>
