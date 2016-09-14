@@ -2,25 +2,37 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BlogspotXamarin.Views.MainPage">
-  <ListView ItemsSource="{Binding FeedList}" HasUnevenRows="true">
-    <ListView.ItemTemplate>
-      <DataTemplate>
-        <ViewCell> 
-            <Grid Margin="12">
-			  <Grid.ColumnDefinitions>
-				<ColumnDefinition Width="1*" />
-				<ColumnDefinition Width="4*" />
-			  </Grid.ColumnDefinitions>
-              <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />  
-              </Grid.RowDefinitions>
-              <Label Text="{Binding Title}" Grid.Column="1" FontAttributes="Bold" FontSize="Medium" /> 
-              <Label Text="{Binding ShortContent}" Grid.Column="1" Grid.Row="1" Margin="0,0,0,12" HeightRequest="60" FontSize="Small" />  
-			  <Image Source="{Binding ImageLink}" Grid.RowSpan="2" Aspect="Fill" WidthRequest="90" HeightRequest="90" />
-            </Grid> 
-        </ViewCell>
-      </DataTemplate>
-    </ListView.ItemTemplate>
-  </ListView>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		
+		<Grid BackgroundColor="#EF6C00" Padding="12,6,12,12">
+			<Label Text="Aditya Wibisana's Portofolio" FontSize="Medium" />
+		</Grid>
+		
+	  	<ListView ItemsSource="{Binding FeedList}" HasUnevenRows="true" Grid.Row="1" Margin="0,-6,0,0">
+	    	<ListView.ItemTemplate>
+	      		<DataTemplate>
+	        		<ViewCell> 
+	            		<Grid Margin="12,12,12,12">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="1*" />
+								<ColumnDefinition Width="4*" />
+						  	</Grid.ColumnDefinitions>
+			              	<Grid.RowDefinitions>
+			                	<RowDefinition Height="Auto" />
+			                	<RowDefinition Height="Auto" />  
+			              	</Grid.RowDefinitions>
+							
+		              		<Label Text="{Binding Title}" Grid.Column="1" FontAttributes="Bold" FontSize="Medium" /> 
+		              		<Label Text="{Binding ShortContent}" Grid.Column="1" Grid.Row="1" Margin="0,0,0,12" HeightRequest="60" FontSize="Small" />  
+					  		<Image Source="{Binding ImageLink}" Grid.RowSpan="2" Aspect="Fill" WidthRequest="90" HeightRequest="90" />
+	            		</Grid> 
+	        		</ViewCell>
+	      		</DataTemplate>
+	    	</ListView.ItemTemplate>
+	  	</ListView>
+	</Grid>
 </ContentPage>
