@@ -28,7 +28,7 @@ namespace FeedParserPCL
 					if (String.IsNullOrEmpty(_content))
 						return;
                     ShortContent = HtmlRemoval.StripTagsRegex(_content);
-                    ShortContent = ShortContent.Length > 50 ? ShortContent.Substring(0, 50) + "..." : ShortContent;
+                    ShortContent = ShortContent.Length > 125 ? ShortContent.Substring(0, 125) + "..." : ShortContent;
 					ImageLink = Regex.Match(_content, "<img.+?src=[\"'](.+?)[\"'].*?>", RegexOptions.IgnoreCase).Groups[1].Value;
                 }
             }
