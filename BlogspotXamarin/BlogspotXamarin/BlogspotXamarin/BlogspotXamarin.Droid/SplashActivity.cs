@@ -12,7 +12,7 @@ namespace BlogspotXamarin.Droid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.layout1);  
+            SetContentView(Resource.Layout.splashscreen);  
             Java.Lang.Runnable runnable = new Java.Lang.Runnable(() =>
             {
                 Intent i = new Intent(this, typeof(MainActivity));

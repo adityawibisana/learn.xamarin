@@ -126,7 +126,7 @@
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\layout\layout1.axml">
+    <AndroidResource Include="Resources\layout\splashscreen.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
