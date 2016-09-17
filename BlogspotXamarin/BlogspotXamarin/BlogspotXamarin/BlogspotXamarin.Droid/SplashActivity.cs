@@ -6,7 +6,7 @@ using Android.Content.PM;
 
 namespace BlogspotXamarin.Droid
 {
-    [Activity(Label = "Aditya Wibisana's", Icon = "@drawable/aw_logo", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, MainLauncher=true, Theme = "@style/MyThemes")]
+    [Activity(Label = "Aditya Wibisana's", Icon = "@drawable/aw_logo", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, MainLauncher=true, Theme = "@style/MyThemes", NoHistory =true)]
     public class SplashActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
