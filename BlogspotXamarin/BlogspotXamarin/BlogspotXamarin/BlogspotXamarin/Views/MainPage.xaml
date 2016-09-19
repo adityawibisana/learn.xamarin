@@ -8,8 +8,17 @@
 			<RowDefinition Height="*" />
 		</Grid.RowDefinitions>
 		
-		<Grid BackgroundColor="#EF6C00" Padding="12,6,12,12">
-			<Label Text="Aditya Wibisana's Portofolio" FontSize="Medium" />
+		<Grid BackgroundColor="#EF6C00" Padding="12,12,12,12">
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="1*" />
+          <ColumnDefinition Width="4*" />          
+        </Grid.ColumnDefinitions>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+          <Image Source="aw_logo_white.png" WidthRequest="30" HeightRequest="30" />
+        </StackLayout>
+        <Label Text="Aditya Wibisana's Portofolio" FontSize="Medium" Grid.Column="1" VerticalTextAlignment="Center" />  
+      </Grid> 
 		</Grid>
 		
 	  	<ListView ItemsSource="{Binding FeedList}" HasUnevenRows="true" Grid.Row="1" Margin="0,-6,0,0">
