@@ -21,7 +21,7 @@
       </Grid> 
 		</Grid>
 		
-	  	<ListView ItemsSource="{Binding FeedList}" HasUnevenRows="true" Grid.Row="1" Margin="0,-6,0,0">
+	  	<ListView ItemsSource="{Binding FeedList}" HasUnevenRows="true" Grid.Row="1" Margin="0,-6,0,0" ItemTapped="OnItemTapped">
 	    	<ListView.ItemTemplate>
 	      		<DataTemplate>
 	        		<ViewCell> 
