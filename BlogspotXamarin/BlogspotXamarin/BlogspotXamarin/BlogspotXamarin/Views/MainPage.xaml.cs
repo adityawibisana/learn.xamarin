@@ -10,15 +10,26 @@ namespace BlogspotXamarin.Views
 
         public MainPage()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            this.Appearing += MainPage_Appearing;            
+        }
+
+        private void MainPage_Appearing(object o, EventArgs e)
+        {
+            MessagingCenter.Subscribe<MainPageViewModel>(this, Constants.Constant.NO_INTERNET, async (sender) =>
+            {
+                await DisplayAlert("No Internet", Constants.Constant.RELOAD_MESSAGE, "OK");
+                ViewModel.UpdateFeed(); 
+            });
+
             ViewModel = new MainPageViewModel();
-            BindingContext = ViewModel; 
+            BindingContext = ViewModel;
         }
 
         private void OnItemTapped(Object sender, ItemTappedEventArgs e)
         {    
             ViewModel.OnItemTapped(e); 
-            Navigation.PushModalAsync(new ArticlePage());
+            Navigation.PushModalAsync(new ArticlePage()); 
         }
     }
 }

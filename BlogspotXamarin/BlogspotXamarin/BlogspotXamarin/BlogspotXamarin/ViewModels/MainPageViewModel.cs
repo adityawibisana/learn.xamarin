@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using FeedParserPCL;
 using BlogspotXamarin.Services;
+using System.Collections.Generic;
 
 namespace BlogspotXamarin.ViewModels
 {
@@ -17,12 +18,24 @@ namespace BlogspotXamarin.ViewModels
 			UpdateFeed();
         }
 
-		private async void UpdateFeed()
+		public async void UpdateFeed()
 		{
             _rssService = RSSService.Instance;
 
 			FeedParser parser = new FeedParser();
-			var items = await parser.Parse(new Uri("http://aditya-wibisana.blogspot.com/feeds/posts/default?alt=rss"), FeedType.Rss);
+            IEnumerable<Item> items = null;
+            try
+            {
+                items = await parser.Parse(new Uri("http://aditya-wibisana.blogspot.com/feeds/posts/default?alt=rss"), FeedType.Rss);
+            }
+            catch (Exception e)
+            {
+                if (e.GetType() == typeof(System.Net.WebException))
+                {
+                    Xamarin.Forms.MessagingCenter.Send(this, Constants.Constant.NO_INTERNET);
+                    return;
+                }
+            } 
             
 			FeedList = new ObservableCollection<Item>();
 			foreach (Item item in items)

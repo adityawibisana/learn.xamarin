@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Constants\Constant.cs" />
     <Compile Include="FeedParserPCL\FeedParser.cs" />
     <Compile Include="FeedParserPCL\FeedType.cs" />
     <Compile Include="FeedParserPCL\HtmlRemoval.cs" />
