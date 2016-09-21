@@ -17,5 +17,11 @@ namespace BlogspotXamarin.Views
             InitializeComponent();
             BindingContext = ViewModel = new ViewModels.ArticlePageViewModel();
         }
+
+        private void OnWebNavigated(object sender, WebNavigatedEventArgs e)
+        {
+            WaitingGrid.IsVisible = false;
+            WebView.IsVisible = true;
+        }
     }
 }

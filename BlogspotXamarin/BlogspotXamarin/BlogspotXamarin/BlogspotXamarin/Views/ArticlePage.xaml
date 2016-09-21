@@ -2,5 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BlogspotXamarin.Views.ArticlePage">
-  <WebView Source="{Binding Link}" />
+  <Grid>
+    <Grid x:Name="WaitingGrid">
+      <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Image Source="aw_logo.png" Margin="36" />
+        <Label Text="Please Wait..." FontSize="Large" HorizontalTextAlignment="Center"/>
+      </StackLayout>
+    </Grid>
+    <WebView x:Name="WebView" Source="{Binding Link}" Navigated="OnWebNavigated" IsVisible="false" />
+  </Grid>
 </ContentPage>
